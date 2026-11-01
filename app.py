@@ -1,10 +1,22 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello Flask"
+    courses = [
+        "Python",
+        "HTML",
+        "CSS",
+        "JS",
+        "Flask"
+    ]
+    student = {
+        "name": "suman",
+        "course": "Flask",
+        "city": "khuzdar"
+    }
+    return render_template("index.html", courses=courses, student=student)
 
 if __name__ == "__main__":
     app.run(debug=True)

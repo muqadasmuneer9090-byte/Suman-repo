@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For loop</title>
+</head>
+<body>
+    <h1>Coureses</h1>
+    <ul>
+        {% for coures in courses %}
+        <li> {{loop.index0 }}  {{coures}} </li>
+    
+      {% endfor %}
+    </ul> 
+
+    <hr>
+    <ul>
+        {% for  key,value in student.items() %}
+        <li> {{key}} : {{value}} </li>
+    
+      {% endfor %}
+    </ul> 
+</body>
+</html>
